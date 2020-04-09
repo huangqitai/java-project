@@ -1,0 +1,34 @@
+"use strict";
+exports.__esModule = true;
+var JOB_SQRXXB_LINK = /** @class */ (function () {
+    function JOB_SQRXXB_LINK(jOB_SQRXXB_XH, jOB_SQRXXB_FSQRLX, jOB_SQRXXB_FSQRMC, jOB_SQRXXB_FZJZL, jOB_SQRXXB_FZJHM, jOB_SQRXXB_FDWXZ, jOB_SQRXXB_FLXR, jOB_SQRXXB_FLXDH, jOB_SQRXXB_FSSHY, jOB_SQRXXB_FGJDQ, jOB_SQRXXB_FHJSZSS, jOB_SQRXXB_FTXDZ, jOB_SQRXXB_FGYQK, jOB_SQRXXB_FQLBL, jOB_SQRXXB_FDZYJ, jOB_SQRXXB_FYB, jOB_SQRXXB_FXB, jOB_SQRXXB_FFRMC, jOB_SQRXXB_FFRZJZL, jOB_SQRXXB_FFRZJHM, jOB_SQRXXB_FDLRMC, jOB_SQRXXB_FDLRZJZL, jOB_SQRXXB_FDLRZJHM, jOB_SQRXXB_FDLRDH, jOB_SQRXXB_FDLJG, jOB_SQRXXB_FGZDW) {
+        this["JOB_SQRXXB.XH"] = jOB_SQRXXB_XH || "";
+        this["JOB_SQRXXB.FSQRLX"] = jOB_SQRXXB_FSQRLX || "";
+        this["JOB_SQRXXB.FSQRMC"] = jOB_SQRXXB_FSQRMC || "";
+        this["JOB_SQRXXB.FZJZL"] = jOB_SQRXXB_FZJZL || "";
+        this["JOB_SQRXXB.FZJHM"] = jOB_SQRXXB_FZJHM || "";
+        this["JOB_SQRXXB.FDWXZ"] = jOB_SQRXXB_FDWXZ || "";
+        this["JOB_SQRXXB.FLXR"] = jOB_SQRXXB_FLXR || "";
+        this["JOB_SQRXXB.FLXDH"] = jOB_SQRXXB_FLXDH || "";
+        this["JOB_SQRXXB.FSSHY"] = jOB_SQRXXB_FSSHY || "";
+        this["JOB_SQRXXB.FGJDQ"] = jOB_SQRXXB_FGJDQ || "";
+        this["JOB_SQRXXB.FHJSZSS"] = jOB_SQRXXB_FHJSZSS || "";
+        this["JOB_SQRXXB.FTXDZ"] = jOB_SQRXXB_FTXDZ || "";
+        this["JOB_SQRXXB.FGYQK"] = jOB_SQRXXB_FGYQK || "";
+        this["JOB_SQRXXB.FQLBL"] = jOB_SQRXXB_FQLBL || "";
+        this["JOB_SQRXXB.FDZYJ"] = jOB_SQRXXB_FDZYJ || "";
+        this["JOB_SQRXXB.FYB"] = jOB_SQRXXB_FYB || "";
+        this["JOB_SQRXXB.FXB"] = jOB_SQRXXB_FXB || "";
+        this["JOB_SQRXXB.FFRMC"] = jOB_SQRXXB_FFRMC || "";
+        this["JOB_SQRXXB.FFRZJZL"] = jOB_SQRXXB_FFRZJZL || "";
+        this["JOB_SQRXXB.FFRZJHM"] = jOB_SQRXXB_FFRZJHM || "";
+        this["JOB_SQRXXB.FDLRMC"] = jOB_SQRXXB_FDLRMC || "";
+        this["JOB_SQRXXB.FDLRZJZL"] = jOB_SQRXXB_FDLRZJZL || "";
+        this["JOB_SQRXXB.FDLRZJHM"] = jOB_SQRXXB_FDLRZJHM || "";
+        this["JOB_SQRXXB.FDLRDH"] = jOB_SQRXXB_FDLRDH || "";
+        this["JOB_SQRXXB.FDLJG"] = jOB_SQRXXB_FDLJG || "";
+        this["JOB_SQRXXB.FGZDW"] = jOB_SQRXXB_FGZDW || "";
+    }
+    return JOB_SQRXXB_LINK;
+}());
+exports.JOB_SQRXXB_LINK = JOB_SQRXXB_LINK;
