@@ -2,7 +2,6 @@ package com.qitai.niuke;
 
 import org.junit.Test;
 
-import java.util.Random;
 import java.util.Stack;
 
 
@@ -129,5 +128,139 @@ public class Solution {
     public void testArr(){
         int [] arr = {1,2,3,4,5,6,7};
         reOrderArray(arr);
+    }
+
+    @Test
+    public void testNode(){
+        ListNode listNode = new ListNode(0);
+        listNode.next = new ListNode(1);
+        listNode.next.next = new ListNode(2);
+        listNode.next.next.next = new ListNode(3);
+        listNode.next.next.next.next = new ListNode(4);
+       /* while (listNode!=null){
+            System.out.print(listNode.val+"     ");
+            listNode = listNode.next;
+        }*/
+        //System.out.println(FindKthToTail(listNode,2).val);
+        System.out.println(ReverseList(listNode).val);
+    }
+
+    @Test
+    public void testNode1(){
+        ListNode listNode = new ListNode(0);
+        listNode.next = new ListNode(1);
+        listNode.next.next = new ListNode(2);
+        listNode.next.next.next = new ListNode(3);
+        listNode.next.next.next.next = new ListNode(4);
+
+        ListNode listNode1 = new ListNode(3);
+        listNode1.next = new ListNode(4);
+        listNode1.next.next = new ListNode(5);
+        listNode1.next.next.next = new ListNode(6);
+        listNode1.next.next.next.next = new ListNode(7);
+       Merge(listNode,listNode1);
+    }
+    /**
+     * 合并链表，单调不减
+     */
+    public ListNode Merge(ListNode list1,ListNode list2) {
+        if (list1==null||list2==null){
+            return null;
+        }
+        int count = 0;
+        while (list1!=null||list2!=null){
+            if (list1!=null){
+                count++;
+                list1 = list1.next;
+            }
+            if (list2!=null){
+                count++;
+                list2 = list2.next;
+            }
+        }
+        ListNode[] listNodes = new ListNode[count];
+
+
+        return null;
+    }
+
+    public ListNode Merge1(ListNode list1,ListNode list2) {
+        if (list1==null||list2==null){
+            return null;
+        }
+        int count = 0;
+        ListNode list1after = null;
+        while (list1!=null) {
+            while (list2!=null){
+                if (list1.val<list2.val){
+                    list1after = list2;
+                    list1.next = list2;
+                    list1.next.next = list1after;
+                }else {
+
+                }
+            }
+        }
+
+        return null;
+    }
+    /**
+     * 输入一个链表，反转链表后，输出新链表的表头
+     * @param head
+     * @return
+     */
+    public ListNode ReverseList(ListNode head) {
+        if (head==null){
+            return null;
+        }
+        ListNode newHead = null;
+        ListNode pPrev = null;
+        while(head!=null){
+            pPrev = head;
+            head = head.next;
+            pPrev.next = newHead;
+            newHead = pPrev;
+        }
+        return newHead;
+    }
+
+    /**
+     * 输入一个链表，输出倒数第K个元素
+     * @param head
+     * @param k
+     * @return
+     */
+    public ListNode FindKthToTail(ListNode head,int k) {
+        if (head==null){
+            return null;
+        }
+        ListNode nowNode = head;
+        int count = 0;
+        while (head!=null){
+            count++;
+            head = head.next;
+        }
+        if (k>count){
+            return null;
+        }
+        int index = count-k+1;
+        count = 0;
+        while (nowNode!=null){
+            count++;
+            if (count==index){
+                return nowNode;
+            }
+            nowNode = nowNode.next;
+        }
+        return null;
+    }
+
+    class ListNode {
+        int val;
+        ListNode next = null;
+
+        ListNode(int val) {
+            this.val = val;
+        }
     }
 }
