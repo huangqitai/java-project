@@ -2,6 +2,11 @@ package com.qitai.niuke;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 public class TreeNodeSolution {
     String rootPre="";
     @Test
@@ -107,4 +112,50 @@ public class TreeNodeSolution {
         if (treeNode.right!=null) return true;
         else return false;
     }
+
+    private boolean hasLeft(TreeNode treeNode){
+        if (treeNode.left!=null) return true;
+        else return false;
+    }
+
+
+
+    @Test
+    public void Test2(){
+        TreeNode treeNode0 = new TreeNode(0);
+        TreeNode treeNode1 = new TreeNode(1);
+        TreeNode treeNode2 = new TreeNode(2);
+        TreeNode treeNode3 = new TreeNode(3);
+        TreeNode treeNode4 = new TreeNode(4);
+        TreeNode treeNode5 = new TreeNode(5);
+        TreeNode treeNode6 = new TreeNode(6);
+        TreeNode treeNode7 = new TreeNode(7);
+        TreeNode treeNode8 = new TreeNode(8);
+        TreeNode treeNode9 = new TreeNode(9);
+
+        treeNode0.left = treeNode1;
+        treeNode0.right = treeNode2;
+        treeNode1.left = treeNode3;
+        treeNode1.right = treeNode4;
+        treeNode2.left = treeNode5;
+        treeNode2.right = treeNode6;
+        treeNode3.left = treeNode7;
+        treeNode3.right = treeNode8;
+        treeNode4.left = treeNode9;
+        PrintFromTopToBottom(treeNode0);
+    }
+    /**
+     * 从上往下打印出二叉树的每个节点，同层节点从左至右打印。
+     */
+    List<Integer> integerList = new ArrayList<>();
+    Queue<TreeNode> queue = new LinkedList<>();
+    public ArrayList<Integer> PrintFromTopToBottom(TreeNode root) {
+        if (root==null) return null;
+        queue.offer(root);
+        while (!queue.isEmpty()){
+            
+        }
+        return null;
+    }
+
 }
