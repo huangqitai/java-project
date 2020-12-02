@@ -12,6 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class HtmlResolver {
+    private Pattern p = Pattern.compile("\\t|\r|\n");
     public void htmlResolver(String html){
         Document doc = Jsoup.parse(html);
         Elements rows = doc.getElementsByTag("a");
@@ -45,6 +46,44 @@ public class HtmlResolver {
         System.out.println(s);*/
         StringBuffer stringBuffer = new StringBuffer();
         System.out.println(stringBuffer.toString());
+    }
+    public String replaceBlank(String str) {
+        String dest = "";
+        if (str!=null) {
+            Matcher m = p.matcher(str);
+            dest = m.replaceAll("");
+        }
+        return dest;
+    }
+    @Test
+    public void htmlResslveUtil(){
+        String htmlStr = "<div id=\"conditionTreeBoxBMP1606\" class=\"easyui-window\" closed=\"true\" title=\"定义查询字段\" style=\"height:430px;display: none;\" \n" +
+                "\t\tdata-options=\"iconCls:'icon-save',modal:true,footer:'#conditionTreeFooterBMP1606',resizable:false,collapsible:false,maximizable:false,minimizable:false\">\n" +
+                "\t \t<table style=\"margin:5px 10px\">\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<td>\n" +
+                "\t\t\t\t\t<select id=\"deptStatusSet1\" name=\"deptStatusSet1\" class=\"easyui-combotree\" editable=\"false\"\n" +
+                "\t\t\t\t\t\tdata-options=\"onSelect:selectwork\"\n" +
+                "\t\t\t\t\t\tstyle=\"width:400px\"></select>\n" +
+                "\t\t\t\t</td>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t\t<tr>\n" +
+                "\t\t\t\t<td>\n" +
+                "\t\t\t\t\t<ul class=\"easyui-datalist ibase_datalist\" id=\"mappingListcondi\" style=\"width:400px;height:300px\"\n" +
+                "\t\t\t\t\t\tdata-options=\"checkbox:true,singleSelect:false,checkOnSelect:true\" >\n" +
+                "\t\t\t\t\t</ul>\n" +
+                "\t\t\t\t</td>\n" +
+                "\t\t\t</tr>\n" +
+                "\t\t</table>\n" +
+                " \t\n" +
+                " \t\t<div id=\"conditionTreeFooterBMP1606\" style=\"padding:5px 10px;text-align:center;\">\n" +
+                "\t\t\t<a href=\"#\" class=\"easyui-linkbutton\" icon=\"icon-ok\" onclick=\"getFieldTreeNode('condition')\">确定</a>\n" +
+                "\t\t\t<a href=\"#\" class=\"easyui-linkbutton\" icon=\"icon-cancel\" onclick=\"$('#conditionTreeBoxBMP1606').window('close')\">关闭</a>\n" +
+                "\t\t</div>\n" +
+                "\t</div>";
+        htmlStr = replaceBlank(htmlStr);
+        System.out.println(htmlStr);
+
     }
 
     @Test
