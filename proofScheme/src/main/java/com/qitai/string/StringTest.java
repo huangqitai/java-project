@@ -1,11 +1,8 @@
 package com.qitai.string;
 
-import com.southgis.ibase.utils.ConvertUtil;
-import com.southgis.ibase.utils.json.JsonUtil;
 import org.junit.Test;
 
 import java.io.File;
-import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -105,14 +102,5 @@ public class StringTest {
             default:regtype = BLJD;break;
         }
         System.out.println(regtype);
-    }
-
-    @Test
-    public void test4(){
-        String s = "{\"strJson\":\"{\\\"gid\\\":\\\"\\\",\\\"zdzl\\\":\\\"\\\",\\\"lpmc\\\":\\\"\\\",\\\"count\\\":\\\"-1\\\",\\\"zddm\\\":\\\"\\\",\\\"likequery\\\":\\\"false\\\",\\\"password\\\":\\\"E10ADC3949BA59ABBE56E057F20F883E\\\",\\\"zl\\\":\\\"\\\",\\\"xzqhdm\\\":\\\"445102\\\",\\\"page\\\":\\\"-1\\\",\\\"kfsmc\\\":\\\"\\\",\\\"username\\\":\\\"ycslsj\\\",\\\"zrzh\\\":\\\"0006\\\"}\"}";
-        Map<String,Object> m = JsonUtil.jsonStringToMap(s);
-        s = ConvertUtil.getValue(m.get("strJson"),"");
-        Map<String,Object> mm = JsonUtil.jsonStringToMap(s);
-        System.out.println(s);
     }
 }

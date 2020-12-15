@@ -15,68 +15,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamTest {
-
-    @Test
-    public void demo03(){
-        List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
-        for (int i=1;i<9;i++){
-            Map<String,Object> map = new HashMap<>();
-            map.put("id",i);
-            map.put("name","张三丰"+i);
-            list.add(map);
-        }
-        Stream<Map<String, Object>> s1 = list.stream();
-        //list.stream().forEach(map-> System.out.println(map));
-        //List<Map<String,Object>> list2 = new ArrayList<Map<String,Object>>();
-        List<String> as = new ArrayList<>();
-        for (int i=1;i<5;i++){
-            as.add(String.valueOf(i));
-        }
-        List<Map<String, Object>> resultList2 = list.stream().map(m->{
-            m.put("grade",0);
-            as.stream().filter(m2->{
-                if (Objects.equals(String.valueOf(m.get("id")), m2)){
-                    return true;
-                }else {
-                    return false;
-                }
-            }).forEach(s-> m.put("grade",100));
-            return m;
-        }).collect(Collectors.toList());
-        resultList2.stream().forEach(s-> System.out.println(s));
-    }
-    @Test
-    public void demo02(){
-        List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
-        for (int i=1;i<9;i++){
-            Map<String,Object> map = new HashMap<>();
-            map.put("id",i);
-            map.put("name","张三丰"+i);
-            list.add(map);
-        }
-        Stream<Map<String, Object>> s1 = list.stream();
-        //list.stream().forEach(map-> System.out.println(map));
-        List<Map<String,Object>> list2 = new ArrayList<Map<String,Object>>();
-        for (int i=1;i<5;i++){
-            Map<String,Object> map2 = new HashMap<>();
-            map2.put("id",i);
-            map2.put("grade",i+60);
-            list2.add(map2);
-        }
-        List<Map<String, Object>> resultList2 = list.stream().map(m->{
-            m.put("grade",0);
-            list2.stream().filter(m2->{
-                if (Objects.equals(m.get("id"), m2.get("id"))){
-                    return true;
-                }else {
-                    return false;
-                }
-            }).forEach(s-> m.put("grade",s.get("grade")));
-            return m;
-        }).collect(Collectors.toList());
-        resultList2.stream().forEach(s-> System.out.println(s));
-    }
-
     @Test
     public void demo01(){
         List<Map<String,Object>> list = new ArrayList<Map<String,Object>>();
