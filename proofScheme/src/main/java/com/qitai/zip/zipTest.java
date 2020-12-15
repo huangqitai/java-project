@@ -16,18 +16,6 @@ public class zipTest {
     }
 
     @Test
-    public void ziptest1(){
-        try {
-            File file = new File("D:\\ibase\\opt\\sinfo\\jobfiles\\6d569eb1-0638-42c7-ad3b-b19405f2438e\\中心2020年指定修订并印发制度及附件表格");
-            if (file.exists()){
-                System.out.println("cunzai");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    @Test
     public void unZipTest(){
         ZipUtil.unZip("E:\\tmp\\logs.zip");
         /*String f = "E:\\tmp";
