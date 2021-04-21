@@ -2,7 +2,9 @@ package com.qitai.niuke;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class SolutionA {
@@ -83,5 +85,41 @@ public class SolutionA {
             ss.append(strings[i]).append(" ");
         }
         return ss.substring(0,ss.lastIndexOf(" "));
+    }
+
+    /**
+     * 题目描述
+     * 输入n个整数，找出其中最小的K个数。例如输入4,5,1,6,2,7,3,8这8个数字，则最小的4个数字是1,2,3,4。
+     * 示例1
+     * 输入
+     * 复制
+     * [4,5,1,6,2,7,3,8],4
+     * 返回值
+     * 复制
+     * [1,2,3,4]
+     */
+    @Test
+    public void test3(){
+        GetLeastNumbers_Solution(new int[]{4,5,1,6,2,7,3,8},4);
+    }
+    public ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
+        if (k> input.length){
+            return new ArrayList<>();
+        }
+        for (int i = 0; i < input.length-1; i++) {
+            for (int j = 0; j < input.length-1-i; j++) {
+                int a = input[j];
+                int b = input[j+1];
+                if (a>b){
+                    input[j] = b;
+                    input[j+1] = a;
+                }
+            }
+        }
+        ArrayList<Integer> re = new ArrayList<>();
+        for (int i = 0; i < k; i++) {
+            re.add(input[i] );
+        }
+        return re;
     }
 }

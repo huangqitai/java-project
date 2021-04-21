@@ -1,6 +1,12 @@
 package com.qitai.string;
 
+import com.southgis.ibase.utils.ConvertUtil;
+import com.southgis.ibase.utils.json.JsonUtil;
 import org.junit.Test;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class StringTest {
     @Test
@@ -51,5 +57,34 @@ public class StringTest {
             n = str[i] - '0' + n*10;
         }
         return n*flag;
+    }
+
+    @Test
+    public void test5(){
+        String log = "{\"msg\":null,\"res\":\"SUCCESS\",\"respdata\":[{\"appcode\":\"Azrzyyw4400000000008202006180001\",\"apicode\":\"Izrzyyw440000000000F202006230001\",\"data\":{\"respdata\":{\"records\":[{\"swbs\":\"0\",\"xmPpddm\":\"1\",\"gmsfhm\":\"441702199202241713\",\"gmsfhmPpddm\":\"1\"}]},\"msg\":\"查询成功！\",\"res\":\"200\",\"originDept\":\"中华人民共和国公安部\",\"success\":true}}],\"resDescription\":\"成功\"}";
+        Map<String,Object> resultMap = new HashMap<>();
+
+            Map<String, Object> contentMap = JsonUtil.jsonStringToMap(log);
+
+            if ("SUCCESS".equals(contentMap.get("res"))) {
+                List<Map<String, Object>> respDataList = (List<Map<String, Object>>) contentMap.get("respdata");
+                resultMap = JsonUtil.jsonStringToMap(ConvertUtil.getValue(respDataList.get(0).get("data"), ""));
+            } else if ("200".equals(contentMap.get("res"))) {
+                resultMap = contentMap;
+            } else {
+                resultMap.put("res", contentMap.get("res"));
+                resultMap.put("msg", contentMap.get("msg"));
+            }
+        System.out.println("sss");
+    }
+
+    @Test
+    public void s(){
+        String a = "aaww";sa("www");
+        System.out.println(a);
+    }
+    private String sa(String a){
+        a = a + "aaa";
+        return "";
     }
 }
