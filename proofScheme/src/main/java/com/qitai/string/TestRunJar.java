@@ -1,6 +1,6 @@
 package com.qitai.string;
 
-import com.southgis.ibase.utils.ManageJarUtil;
+import com.qitai.utils.ManageJarUtil;
 import org.junit.Test;
 
 import java.io.IOException;

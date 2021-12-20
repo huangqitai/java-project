@@ -1,6 +1,6 @@
 package com.qitai.jsontostring;
 
-import com.southgis.ibase.utils.json.JsonUtil;
+import com.qitai.utils.json.JsonUtil;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -25,5 +25,10 @@ public class JsonToString {
         String ss = JsonUtil.toJsonString(ls);
         ArrayList<HashMap<String, Object>> os = JsonUtil.jsonStringToList(ss);
         System.out.println(os);
+    }
+
+    @Test
+    public void test2(){
+        System.out.println(3<<4);
     }
 }

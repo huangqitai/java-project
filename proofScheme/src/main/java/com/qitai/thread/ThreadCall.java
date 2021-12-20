@@ -1,7 +1,7 @@
 package com.qitai.thread;
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
-import com.southgis.ibase.utils.CheckUtil;
-import com.southgis.ibase.utils.json.JsonUtil;
+import com.qitai.utils.CheckUtil;
+import com.qitai.utils.json.JsonUtil;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

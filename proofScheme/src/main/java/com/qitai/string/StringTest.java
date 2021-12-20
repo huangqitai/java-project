@@ -1,7 +1,7 @@
 package com.qitai.string;
 
-import com.southgis.ibase.utils.ConvertUtil;
-import com.southgis.ibase.utils.json.JsonUtil;
+import com.qitai.utils.ConvertUtil;
+import com.qitai.utils.json.JsonUtil;
 import org.junit.Test;
 
 import java.util.HashMap;

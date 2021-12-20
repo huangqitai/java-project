@@ -1,10 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <title>测试程序JavaScript</title>
 </head>
+
 <body>
-<h2>前端工程打包位置</h2>
+<a href="http://172.16.42.138:8081/comprehensiveMonitorWebService/conference/saveConference">测试请求</a>
+<img src="http://172.16.42.138:8081/comprehensiveMonitorWebService/conference/saveConference"  referrerpolicy="no-referrer"/>
+<form action="http://172.16.42.138:8081/comprehensiveMonitorWebService/conference/saveConference" method=POST>
+
+    <input type="hidden" name="account" value="xiaoming" />
+
+    <input type="hidden" name="amount" value="10000" />
+
+    <input type="hidden" name="for" value="hacker" />
+
+</form>
 </body>
+<script type="text/javascript" src="../static/jquery-3.5.1.min.js" ></script>
+<script type="text/javascript">
+    //document.forms[0].submit();
+    /*$.ajax({
+        url:'http://192.168.10.104:8080/mainWeb/system/getServiceConfigure',
+        type:'post',
+        success:function(data){
+            console.log(data.msg);
+        },
+        error:function(data){
+            console.log(data.msg);
+        }
+    });*/
+</script>
 </html>
