@@ -1,9 +1,6 @@
 package com.qitai.thread;
-import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import com.qitai.utils.CheckUtil;
-import com.qitai.utils.json.JsonUtil;
 import org.junit.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.Arrays;

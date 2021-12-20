@@ -1,11 +1,9 @@
 package com.qitai.utils;
 
-import com.qitai.utils.CheckUtil;
-import com.qitai.utils.DateUtil;
-import com.qitai.utils.UUIDHelper;
+import cn.hutool.db.meta.Column;
 import com.qitai.utils.exception.ExceptionUtil;
+import oracle.sql.CLOB;
 
-import javax.persistence.Column;
 import java.beans.BeanInfo;
 import java.beans.Introspector;
 import java.beans.PropertyDescriptor;
@@ -475,10 +473,10 @@ public final class ConvertUtil
 			return Base64.getEncoder().encodeToString((byte[])ov);
 		}
 		//添加clob类型的格式装换 tmg 2019-01-18
-		if(ov instanceof oracle.sql.CLOB){
+		if(ov instanceof CLOB){
 			String result = sDefault;
 			try{
-				oracle.sql.CLOB clob = (oracle.sql.CLOB)ov;
+				CLOB clob = (CLOB)ov;
 				result = clob.getSubString((long)1, (int) clob.length());
 			}catch(Exception e) {
 				ExceptionUtil.log(e);
@@ -928,7 +926,7 @@ public final class ConvertUtil
 	    	for(Annotation an : annotations){
           if(an instanceof Column){
               Column column = (Column)an;
-              fieldHasColumnAnnoMap.put(column.name(),method);
+              fieldHasColumnAnnoMap.put(column.getName(),method);
           }
 	    	}
 	    }
