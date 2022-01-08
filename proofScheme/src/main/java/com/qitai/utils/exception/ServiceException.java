@@ -188,7 +188,7 @@ public class ServiceException extends RuntimeException {
 			}
 			catch(IOException e1)
 			{
-				ExceptionUtil.log(e1);
+
 				e1.printStackTrace();
 			}
 		}

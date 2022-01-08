@@ -292,7 +292,7 @@ public final class FileUtil {
 		}
 		catch(Exception e)
 		{
-			ExceptionUtil.log(e);
+
 			e.printStackTrace();
 		}
 		finally {
@@ -301,7 +301,7 @@ public final class FileUtil {
                     buff.close();
                 }
 			} catch (Exception e) {
-				ExceptionUtil.log(e);
+
 				e.printStackTrace();
 			}
 		}
@@ -332,7 +332,7 @@ public final class FileUtil {
 				}
 				br.close();
 			}catch(Exception e){
-				ExceptionUtil.log(e);
+
 				e.printStackTrace();
 			}
 		}

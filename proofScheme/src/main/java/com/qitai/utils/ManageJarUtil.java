@@ -52,10 +52,10 @@ public class ManageJarUtil
        }
 
    } catch (IOException e) {
-			ExceptionUtil.log(e);
+
        e.printStackTrace();
    } catch (Exception e) {
-			ExceptionUtil.log(e);
+
        e.printStackTrace();
    } finally {
        // 完毕，关闭所有链接
@@ -63,7 +63,7 @@ public class ManageJarUtil
            os.close();
            inputStream.close();
        } catch (IOException e) {
-		   ExceptionUtil.log(e);
+
            e.printStackTrace();
        }
    }

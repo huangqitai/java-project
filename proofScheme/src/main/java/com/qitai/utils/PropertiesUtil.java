@@ -87,7 +87,7 @@ public final class PropertiesUtil
 			
 			return prop.getProperty(key);
 		}catch(Exception ex){
-			ExceptionUtil.log(ex);
+
 			return null;
 		}
 	}

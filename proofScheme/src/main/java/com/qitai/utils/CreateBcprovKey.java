@@ -135,7 +135,7 @@ public class CreateBcprovKey {
       cipher.init(true, pKey);
       return cipher.processBlock(input, 0, input.length);
 		}catch(Exception ex){
-			ExceptionUtil.log(ex);
+
 			throw new ServiceException("加密异常:"+ex.getMessage(),ex);
 		}
 	}
@@ -175,7 +175,7 @@ public class CreateBcprovKey {
       cipher.init(false, pKey);//false表示解密
       return cipher.processBlock(input, 0, input.length);
 		}catch(Exception ex){
-			ExceptionUtil.log(ex);
+
 			throw new ServiceException("解密异常:"+ex.getMessage(),ex);
 		}
 	}

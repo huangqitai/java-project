@@ -111,7 +111,7 @@ public class ResultSetUtil {
 		}
 		catch(Exception e)
 		{
-			ExceptionUtil.log(e);
+
 			e.printStackTrace();
 		}
 		return result;

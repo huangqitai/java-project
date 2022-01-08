@@ -120,7 +120,7 @@ public final class QRCodeHelper {
             }
         }
     }catch(Exception ex){
-        ExceptionUtil.log(ex);
+
     	throw new ServiceException(ex);
     }
     return image;
@@ -144,7 +144,7 @@ public final class QRCodeHelper {
             qrString = Base64.getEncoder().encodeToString(outStream.toByteArray());
             qrString = "data:image/"+FORMAT+";base64," + qrString;
         }catch(Exception ex){
-            ExceptionUtil.log(ex);
+
         	throw new ServiceException(ex);
         } finally {
         	FileUtil.tryCloseStream(outStream);

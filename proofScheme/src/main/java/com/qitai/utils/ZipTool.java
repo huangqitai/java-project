@@ -59,7 +59,7 @@ public class ZipTool {
             zos.close();
 
         } catch (Exception e) {
-            ExceptionUtil.log(e);
+
             e.printStackTrace();
         }
     }

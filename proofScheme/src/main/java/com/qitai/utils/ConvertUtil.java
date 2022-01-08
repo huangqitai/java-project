@@ -479,7 +479,7 @@ public final class ConvertUtil
 				CLOB clob = (CLOB)ov;
 				result = clob.getSubString((long)1, (int) clob.length());
 			}catch(Exception e) {
-				ExceptionUtil.log(e);
+
 				System.out.println(e.getMessage());
 			}
 			return result;
@@ -544,7 +544,7 @@ public final class ConvertUtil
 		}
 		catch(Exception ex)
 		{
-			ExceptionUtil.log(ex);
+
 			return iDefault;
 		}
 	}
@@ -604,7 +604,7 @@ public final class ConvertUtil
 		}
 		catch(Exception ex)
 		{
-			ExceptionUtil.log(ex);
+
 			return lDefault;
 		}
 	}
@@ -666,7 +666,7 @@ public final class ConvertUtil
 		}
 		catch(Exception ex)
 		{
-			ExceptionUtil.log(ex);
+
 			return biDefautl;
 		}
 	}
@@ -717,7 +717,7 @@ public final class ConvertUtil
 		}
 		catch(Exception ex)
 		{
-			ExceptionUtil.log(ex);
+
 			return dDefault;
 		}
 	}
@@ -772,7 +772,7 @@ public final class ConvertUtil
 		}
 		catch(Exception ex)
 		{
-			ExceptionUtil.log(ex);
+
 			return bdDefault;
 		}
 	}
@@ -826,7 +826,7 @@ public final class ConvertUtil
 		}
 		catch(Exception ex)
 		{
-			ExceptionUtil.log(ex);
+
 			return bDefault;
 		}
 	}
@@ -873,7 +873,7 @@ public final class ConvertUtil
 		}
 		catch(Exception ex)
 		{
-			ExceptionUtil.log(ex);
+
 			return dtDefault;
 		}
 	}
@@ -910,10 +910,10 @@ public final class ConvertUtil
       try {
       	entity = clazz.newInstance();
       } catch (InstantiationException e1) {
-		  ExceptionUtil.log(e1);
+
           e1.printStackTrace();
       } catch (IllegalAccessException e1) {
-		  ExceptionUtil.log(e1);
+
           e1.printStackTrace();
       } 
       Method[] methods = clazz.getMethods();
@@ -986,19 +986,19 @@ public final class ConvertUtil
               }
           }  
 	      } catch (SecurityException e) {
-				ExceptionUtil.log(e);
+
 	          e.printStackTrace();
 	      } catch (NoSuchMethodException e) {
-				ExceptionUtil.log(e);
+
 	          e.printStackTrace();
 	      }   catch (IllegalArgumentException e) {
-				ExceptionUtil.log(e);
+
 	          e.printStackTrace();
 	      } catch (IllegalAccessException e) {
-				ExceptionUtil.log(e);
+
 	          e.printStackTrace();  
 	      } catch (InvocationTargetException e) {
-				ExceptionUtil.log(e);
+
 	          e.printStackTrace();
 	      }
 	    }
@@ -1044,7 +1044,7 @@ public final class ConvertUtil
           }
       	}
       } catch (Exception e) {
-		  ExceptionUtil.log(e);
+
           e.printStackTrace();
       }
       return map;

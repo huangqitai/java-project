@@ -1,19 +1,11 @@
 package com.qitai.utils;
 
-import com.qitai.utils.exception.ExceptionUtil;
-import net.sourceforge.pinyin4j.PinyinHelper;
-import net.sourceforge.pinyin4j.format.HanyuPinyinCaseType;
-import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
-import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
-import net.sourceforge.pinyin4j.format.HanyuPinyinVCharType;
-import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
-
 import java.util.HashSet;
 import java.util.Set;
 
 public class PinyinUtil {
-
-	/**
+/*
+	*//**
 	 * 
 	 * 将字符串转换成拼音数组
 	 * 
@@ -22,7 +14,7 @@ public class PinyinUtil {
 	 * @param src
 	 * 
 	 * @return
-	 */
+	 *//*
 
 	public static String[] stringToPinyin(String src) {
 
@@ -30,7 +22,7 @@ public class PinyinUtil {
 
 	}
 
-	/**
+	*//**
 	 * 
 	 * 将字符串转换成拼音数组
 	 * 
@@ -39,7 +31,7 @@ public class PinyinUtil {
 	 * @param src
 	 * 
 	 * @return
-	 */
+	 *//*
 
 	public static String[] stringToPinyin(String src, String separator) {
 
@@ -47,7 +39,7 @@ public class PinyinUtil {
 
 	}
 
-	/**
+	*//**
 	 * 
 	 * 将字符串转换成拼音数组
 	 * 
@@ -64,7 +56,7 @@ public class PinyinUtil {
 	 *            多音字拼音之间的分隔符
 	 * 
 	 * @return
-	 */
+	 *//*
 
 	public static String[] stringToPinyin(String src, boolean isPolyphone,
 
@@ -94,7 +86,7 @@ public class PinyinUtil {
 
 	}
 
-	/**
+	*//**
 	 * 
 	 * 将单个字符转换成拼音
 	 * 
@@ -103,7 +95,7 @@ public class PinyinUtil {
 	 * @param src
 	 * 
 	 * @return
-	 */
+	 *//*
 
 	public static String charToPinyin(char src, boolean isPolyphone,
 
@@ -158,7 +150,7 @@ public class PinyinUtil {
 				}
 
 			} catch (BadHanyuPinyinOutputFormatCombination e) {
-				ExceptionUtil.log(e);
+
 				e.printStackTrace();
 
 			}
@@ -174,7 +166,7 @@ public class PinyinUtil {
 	}
 
 
-	/**
+	*//**
 	 * 
 	 * 将字符串数组转换成字符串
 	 * 
@@ -184,7 +176,7 @@ public class PinyinUtil {
 	 *            各个字符串之间的分隔符
 	 * 
 	 * @return
-	 */
+	 *//*
 
 	public static String stringArrayToString(String[] str, String separator) {
 
@@ -206,14 +198,14 @@ public class PinyinUtil {
 
 	}
 
-	/**
+	*//**
 	 * 
 	 * 简单的将各个字符数组之间连接起来
 	 * 
 	 * @param str
 	 * 
 	 * @return
-	 */
+	 *//*
 
 	public static String stringArrayToString(String[] str) {
 
@@ -221,7 +213,7 @@ public class PinyinUtil {
 
 	}
 
-	/**
+	*//**
 	 * 
 	 * 将字符数组转换成字符串
 	 * 
@@ -231,7 +223,7 @@ public class PinyinUtil {
 	 *            各个字符串之间的分隔符
 	 * 
 	 * @return
-	 */
+	 *//*
 
 	public static String charArrayToString(char[] ch, String separator) {
 
@@ -253,14 +245,14 @@ public class PinyinUtil {
 
 	}
 
-	/**
+	*//**
 	 * 
 	 * 将字符数组转换成字符串
 	 * 
 	 * @param ch
 	 * 
 	 * @return
-	 */
+	 *//*
 
 	public static String charArrayToString(char[] ch) {
 
@@ -268,7 +260,7 @@ public class PinyinUtil {
 
 	}
 
-	/**
+	*//**
 	 * 
 	 * 取汉字的首字母
 	 * 
@@ -278,7 +270,7 @@ public class PinyinUtil {
 	 *            是否是大写
 	 * 
 	 * @return
-	 */
+	 *//*
 
 	public static char[] getHeadByChar(char src, boolean isCapital) {
 
@@ -328,14 +320,14 @@ public class PinyinUtil {
 
 	}
 
-	/**
+	*//**
 	 * 
 	 * 取汉字的首字母(默认是大写)
 	 * 
 	 * @param src
 	 * 
 	 * @return
-	 */
+	 *//*
 
 	public static char[] getHeadByChar(char src) {
 
@@ -343,14 +335,14 @@ public class PinyinUtil {
 
 	}
 
-	/**
+	*//**
 	 * 
 	 * 查找字符串首字母
 	 * 
 	 * @param src
 	 * 
 	 * @return
-	 */
+	 *//*
 
 	public static String[] getHeadByString(String src) {
 
@@ -358,7 +350,7 @@ public class PinyinUtil {
 
 	}
 
-	/**
+	*//**
 	 * 
 	 * 查找字符串首字母
 	 * 
@@ -368,7 +360,7 @@ public class PinyinUtil {
 	 *            是否大写
 	 * 
 	 * @return
-	 */
+	 *//*
 
 	public static String[] getHeadByString(String src, boolean isCapital) {
 
@@ -376,7 +368,7 @@ public class PinyinUtil {
 
 	}
 
-	/**
+	*//**
 	 * 
 	 * 查找字符串首字母
 	 * 
@@ -389,7 +381,7 @@ public class PinyinUtil {
 	 *            分隔符
 	 * 
 	 * @return
-	 */
+	 *//*
 
 	public static String[] getHeadByString(String src, boolean isCapital,
 			String separator) {
@@ -440,12 +432,12 @@ public class PinyinUtil {
 
 	}
 
-	/**
+	*//**
 	 * 将汉字转换为全拼
 	 * 
 	 * @param src
 	 * @return String
-	 */
+	 *//*
 	public static String getPinYin(String src) {
 		char[] t1 = null;
 		t1 = src.toCharArray();
@@ -472,19 +464,19 @@ public class PinyinUtil {
 				}
 			}
 		} catch (BadHanyuPinyinOutputFormatCombination e) {
-			ExceptionUtil.log(e);
+
 			e.printStackTrace();
 		}
 		return t4;
 	}
 
-	/**
+	*//**
 	 * 提取字符串每个汉字的首字母
 	 * 
 	 * @param str
 	 * @param isCapital false 小写 true 大写
 	 * @return String
-	 */
+	 *//*
 	public static String getPinYinHeadChar(String str,boolean isCapital){
 		String convert = "";
 
@@ -505,12 +497,12 @@ public class PinyinUtil {
 		return convert;
 	}
 
-	/**
+	*//**
 	 * 将字符串转换成ASCII码
 	 * 
 	 * @param cnStr
 	 * @return String
-	 */
+	 *//*
 	public static String getCnASCII(String cnStr) {
 		StringBuffer strBuf = new StringBuffer();
 		// 将字符串转换成字节序列
@@ -523,13 +515,13 @@ public class PinyinUtil {
 		return strBuf.toString();
 	}
 
-	/**
+	*//**
 	 * 汉字转换位汉语拼音首字母，英文字符不变
 	 * 
 	 * @param chines
 	 *            汉字
 	 * @return 拼音
-	 */
+	 *//*
 	public static String converterToFirstSpell(String chines) {
 		String pinyinName = "";
 		char[] nameChar = chines.toCharArray();
@@ -542,7 +534,7 @@ public class PinyinUtil {
 					pinyinName += PinyinHelper.toHanyuPinyinStringArray(
 							nameChar[i], defaultFormat)[0].charAt(0);
 				} catch (BadHanyuPinyinOutputFormatCombination e) {
-					ExceptionUtil.log(e);
+
 					e.printStackTrace();
 				}
 			} else {
@@ -552,13 +544,13 @@ public class PinyinUtil {
 		return pinyinName;
 	}
 
-	/**
+	*//**
 	 * 汉字转换位汉语拼音，英文字符不变
 	 * 
 	 * @param chines
 	 *            汉字
 	 * @return 拼音
-	 */
+	 *//*
 	public static String converterToSpell(String chines) {
 		String pinyinName = "";
 		char[] nameChar = chines.toCharArray();
@@ -571,7 +563,7 @@ public class PinyinUtil {
 					pinyinName += PinyinHelper.toHanyuPinyinStringArray(
 							nameChar[i], defaultFormat)[0];
 				} catch (BadHanyuPinyinOutputFormatCombination e) {
-					ExceptionUtil.log(e);
+
 					e.printStackTrace();
 				}
 			} else {
@@ -581,13 +573,13 @@ public class PinyinUtil {
 		return pinyinName;
 	}
 
-	/**
+	*//**
 	 * 字符串集合转换字符串(逗号分隔)
 	 * 
 	 * @author ray
 	 * @param stringSet
 	 * @return
-	 */
+	 *//*
 	public static String makeStringByStringSet(Set<String> stringSet) {
 		StringBuilder str = new StringBuilder();
 		int i = 0;
@@ -602,13 +594,13 @@ public class PinyinUtil {
 		return str.toString().toLowerCase();
 	}
 
-	/**
+	*//**
 	 * 获取拼音集合
 	 * 
 	 * @author ray
 	 * @param src
 	 * @return Set<String>
-	 */
+	 *//*
 	public static Set<String> getPinyin(String src) {
 		if (src != null && !src.trim().equalsIgnoreCase("")) {
 			char[] srcChar;
@@ -630,7 +622,7 @@ public class PinyinUtil {
 						temp[i] = PinyinHelper.toHanyuPinyinStringArray(
 								srcChar[i], hanYuPinOutputFormat);
 					} catch (BadHanyuPinyinOutputFormatCombination e) {
-						ExceptionUtil.log(e);
+
 						e.printStackTrace();
 					}
 				} else if (((int) c >= 65 && (int) c <= 90)
@@ -650,25 +642,25 @@ public class PinyinUtil {
 		return null;
 	}
 
-	/**
+	*//**
 	 * 递归
 	 * 
 	 * @author ray
 	 * @param strJaggedArray
 	 * @return
-	 */
+	 *//*
 	public static String[] Exchange(String[][] strJaggedArray) {
 		String[][] temp = DoExchange(strJaggedArray);
 		return temp[0];
 	}
 
-	/**
+	*//**
 	 * 递归
 	 * 
 	 * @author ray
 	 * @param strJaggedArray
 	 * @return
-	 */
+	 *//*
 	private static String[][] DoExchange(String[][] strJaggedArray) {
 		int len = strJaggedArray.length;
 		if (len >= 2) {
@@ -696,5 +688,5 @@ public class PinyinUtil {
 	public static void main(String[] args){
 		String str = getPinYinHeadChar ("梁绍威", true);
 		System.out.println(str);
-	}
+	}*/
 }

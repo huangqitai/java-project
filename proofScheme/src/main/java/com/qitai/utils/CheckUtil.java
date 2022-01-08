@@ -267,7 +267,7 @@ public final class CheckUtil
 			format.setLenient(false);
 			format.parse(datevalue);
 		} catch (ParseException e) {
-			ExceptionUtil.log(e);
+
 			//如果throw java.text.ParseException或者NullPointerException，就说明格式不对
 			convertSuccess=false;
 		}

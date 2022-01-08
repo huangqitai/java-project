@@ -428,7 +428,7 @@ public class RequestService
 						HttpsURLConnection.setDefaultHostnameVerifier((s, sslSession) -> true);
 						connection = (HttpsURLConnection) url.openConnection();
 					} catch (Exception e) {
-						ExceptionUtil.log(e);
+
 						throw new RuntimeException(e);
 					}
 				} else {

@@ -32,7 +32,7 @@ public final class EncryptUtil
 			messageDigest.reset();
 			messageDigest.update(str.getBytes(StandardCharsets.UTF_8));
 		} catch (NoSuchAlgorithmException e) {
-			ExceptionUtil.log(e);
+
 			e.printStackTrace();
 			return null;
 		}
@@ -64,7 +64,7 @@ public final class EncryptUtil
 		}
 		catch(Exception e)
 		{
-			ExceptionUtil.log(e);
+
 			return null;
 		}
 	}
@@ -83,7 +83,7 @@ public final class EncryptUtil
 		}
 		catch(Exception e)
 		{
-			ExceptionUtil.log(e);
+
 			return null;
 		}
 	}
@@ -139,7 +139,7 @@ public final class EncryptUtil
 				cipher.init(Cipher.DECRYPT_MODE, key);
 			return cipher.doFinal(input);
 		}catch(Exception ex){
-			ExceptionUtil.log(ex);
+
 			throw new ServiceException("加密出错"+ex.getMessage(),ex);
 		}
 	}

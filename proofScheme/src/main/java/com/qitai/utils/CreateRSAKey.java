@@ -1,7 +1,6 @@
 package com.qitai.utils;
 
 import com.google.common.base.Splitter;
-import com.qitai.utils.CheckUtil;
 import com.qitai.utils.exception.ExceptionUtil;
 import com.qitai.utils.exception.ServiceException;
 
@@ -135,7 +134,7 @@ public class CreateRSAKey {
 
 		return cipher.doFinal(input);
 		}catch(Exception ex){
-			ExceptionUtil.log(ex);
+
 			throw new ServiceException("加密异常:"+ex.getMessage(),ex);
 		}
 	}
@@ -185,7 +184,7 @@ public class CreateRSAKey {
 
 		return cipher.doFinal(input);
 		}catch(Exception ex){
-			ExceptionUtil.log(ex);
+
 			throw new ServiceException("解密异常:"+ex.getMessage(),ex);
 		}
 	}

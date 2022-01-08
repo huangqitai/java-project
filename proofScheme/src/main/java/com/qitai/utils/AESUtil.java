@@ -38,7 +38,7 @@ public class AESUtil {
 	            //解密后是16进制
 	            return new String(cipher.doFinal(Objects.requireNonNull(parseHexStr2Byte(content))), StandardCharsets.UTF_8);
 	        } catch (Exception e) {
-				ExceptionUtil.log(e);
+
 	            e.printStackTrace();
 	        }
 	        return content;
@@ -78,7 +78,7 @@ public class AESUtil {
 			byte[] result = cipher.doFinal(content.getBytes(StandardCharsets.UTF_8));
 			return parseByte2HexStr(result);
 		} catch (Exception e) {
-			ExceptionUtil.log(e);
+
 		  e.printStackTrace();
 		}
 		return content;

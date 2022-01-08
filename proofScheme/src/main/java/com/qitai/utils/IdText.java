@@ -100,7 +100,7 @@ public class IdText implements Serializable
 		}
 		catch(Exception ex)
 		{
-			ExceptionUtil.log(ex);
+
 			ret = null;
 		}
 		return ret;

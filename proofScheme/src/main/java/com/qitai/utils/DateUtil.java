@@ -56,7 +56,7 @@ public final class DateUtil {
 			SimpleDateFormat sdf=new SimpleDateFormat(sFmt);
 			return sdf.format(dtv);
 		}catch(Exception ex){
-			ExceptionUtil.log(ex);
+
 			SimpleDateFormat sdf=new SimpleDateFormat(FULL_DATETIME_FORMAT);
 			return sdf.format(dtv);
 		}
@@ -112,7 +112,7 @@ public final class DateUtil {
 				long lr=Date.parse(sDate);
 		  	return new Date(lr);
 			}catch(Exception ex){
-				ExceptionUtil.log(ex);
+
 				//如果出错，再进行后继处理
 				System.out.println("stringToDate分析【"+sDate+"】出错："+ex.getMessage());
 			}
@@ -147,7 +147,7 @@ public final class DateUtil {
 		try{
 			date = df.parse(sDate);
 		}catch(Exception ex){
-			ExceptionUtil.log(ex);
+
 			throw new ServiceException(ex);
 		}
 		return date;
@@ -634,7 +634,7 @@ public final class DateUtil {
 		}
 		catch(Exception ex)
 		{
-			ExceptionUtil.log(ex);
+
 			org.slf4j.Logger logOutInfo=org.slf4j.LoggerFactory.getLogger("system.out");
 			logOutInfo.error("DateUtil.formatDateString error", ex);
 			sR = "";

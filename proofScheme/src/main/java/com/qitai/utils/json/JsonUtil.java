@@ -48,7 +48,7 @@ public class JsonUtil
 		}
 		catch(Exception e)
 		{
-			ExceptionUtil.log(e);
+
 			e.printStackTrace();
 			result = "";
 		}
@@ -81,7 +81,7 @@ public class JsonUtil
 		}
 		catch(Exception e)
 		{
-			ExceptionUtil.log(e);
+
 			e.printStackTrace();
 			result = null;
 		}
@@ -110,7 +110,7 @@ public class JsonUtil
 		}
 		catch(Exception e)
 		{
-			ExceptionUtil.log(e);
+
 			e.printStackTrace();
 			result = null;
 		}
@@ -140,7 +140,7 @@ public class JsonUtil
 		}
 		catch(Exception e)
 		{
-			ExceptionUtil.log(e);
+
 			e.printStackTrace();
 			result = null;
 		}
@@ -186,7 +186,7 @@ public class JsonUtil
 		}
 		catch(Exception e)
 		{
-			ExceptionUtil.log(e);
+
 			e.printStackTrace();
 			node = null;
 		}

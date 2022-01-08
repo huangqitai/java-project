@@ -65,7 +65,7 @@ public class AESUtils{
      * @return 编码后的base 64 code
      */
     public static String base64Encode(byte[] bytes){
-        return Base64.encodeBase64String(bytes);
+        return Base64.encodeBase64(bytes).toString();
     }
 
     /**
