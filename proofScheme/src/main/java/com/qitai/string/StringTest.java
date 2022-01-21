@@ -87,4 +87,9 @@ public class StringTest {
         a = a + "aaa";
         return "";
     }
+
+    @Test
+    public void s1(){
+        System.out.println("'"+null+"'");
+    }
 }
