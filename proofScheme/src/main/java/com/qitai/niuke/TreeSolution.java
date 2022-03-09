@@ -32,12 +32,13 @@ public class TreeSolution {
      * 前序遍历与中序遍历的左右元素是相等的，中序遍历由根节点平分的左树数组元素数量对应的前序遍历
      * 前相等数量的元素就是左边树的前序遍历数组
      * 前序遍历平分后的右边树第一个元素就是根节点的右节点，前序遍历平分后的左边树第一个元素就是根节点的左节点
-     * 一直由此平分下去，直到左右树数组仅剩一个元素时设置为响应节点后停止递归
+     * 一直由此平分下去，直到左右树数组仅剩一个元素时设置为相应节点后停止递归
      */
     public TreeNode reConstructBinaryTree(int [] pre,int [] vin) {
         if (pre==null||vin==null||pre.length==0||vin.length==0){
             return null;
         }
+        //先序遍历首元素为根节点
         TreeNode rootTreeNode = new TreeNode(pre[0]);
         fun(rootTreeNode,pre,vin);
         return rootTreeNode;
@@ -45,20 +46,26 @@ public class TreeSolution {
     public void fun(TreeNode rootTreeNode,int[] pre,int[] vin){
         int rootIndex = 0;
         for (int i  = 0; i < vin.length; i++) {
+            //找到根节点在中序遍历中的位置
             if (vin[i] == pre[0]){
                 rootIndex = i;
             }
         }
+        //根节点所在的位数为左子树的位数
         int[] left = new int[rootIndex];
+        //右子树位数
         int[] right = new int[vin.length-rootIndex-1];
+        //将中序遍历分为左右两部分
         for (int j  = 0; j < vin.length; j++) {
             if (j<left.length){
                 left[j] = vin[j];
             }else if(j == left.length){
+                //跳过根节点元素
             }else {
                 right[j- rootIndex-1] = vin[j];
             }
         }
+        //将前序遍历也分为左右两部分，前序遍历与中序遍历的左右树位数一致
         int[] preLeft = new int[rootIndex];
         int[] preRight = new int[pre.length-rootIndex-1];
         for (int j  = 1; j < pre.length; j++) {
@@ -72,15 +79,21 @@ public class TreeSolution {
         System.out.println(Arrays.toString(preLeft));
         System.out.println(Arrays.toString(right));
         System.out.println(Arrays.toString(preRight));
+        //左树节点的元素仅有1位时，设置为根节点的左子节点
         if (left.length==1){
             rootTreeNode.left = new TreeNode(preLeft[0]);
         }else if (left.length>1){
+            //左树节点的元素大于1位时，设置为根节点的左子节点，并将左子树的元素进行递归，将左子节点作为新的根节点
+            //继续拆分左右树，直到左右元素仅剩1位
             rootTreeNode.left = new TreeNode(preLeft[0]);
             fun(rootTreeNode.left,preLeft,left);
         }
+        //右树节点的元素仅有1位，设置为根节点的右子节点
         if (right.length==1){
             rootTreeNode.right = new TreeNode(preRight[0]);
         }else if (right.length>1){
+            //右树节点的元素大于1位时，设置为根节点的右子节点，并将右子树的元素进行递归，将右子节点作为新的根节点
+            //继续拆分左右树，直到左右元素仅剩1位
             rootTreeNode.right = new TreeNode(preRight[0]);
             fun(rootTreeNode.right,preRight,right);
         }
