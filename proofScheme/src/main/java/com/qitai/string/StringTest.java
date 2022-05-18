@@ -1,21 +1,64 @@
 package com.qitai.string;
 
+import com.aspose.cad.internal.cm.S;
 import com.qitai.utils.ConvertUtil;
+import com.qitai.utils.DesUtil;
 import com.qitai.utils.json.JsonUtil;
 import org.junit.Test;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class StringTest {
+
+    @Test
+    public void t2(){
+        System.out.println(DesUtil.getEncryptString("52c7a6198cba5c8bb883b3479e3a6e489de0c0dce87aa9135cbb4c6c"));
+        System.out.println(DesUtil.getDecryptString("7a+vyjlYFPXpqaeWeKyCX8dtLGnKheWPbdNDTIcpeWdiT+MoMRsV98PNDI5eoz+ueQDMh+fcPuwQ\r\nFG13I3n+SQ=="));
+        System.out.println(DesUtil.getEncryptString("lXEOKyOk8o6xhQBbC5SmCqNwY5pNw3mZG8CuZS5QP/JN1tr0p9jiA93D3p8+wwW4TuV/yf++RHUQ\\nFG13I3n+SQ=="));
+    }
+
     @Test
     public void test(){
         String a = "bbb";
         str(a);
         System.out.println(a);
     }
+    @Test
+    public void t33t(){
+        String txdz = "/202106/JMH-808559/946b65ea-bf86-4a64-b00b-5e30986123a9.dwg||0";
+        String sjly = txdz.split("\\|\\|")[1];
+        txdz = txdz.split("\\|\\|")[0];
+        System.out.println(txdz);
+        System.out.println(txdz.substring(0,txdz.lastIndexOf("/")));
+        System.out.println(txdz.substring(txdz.lastIndexOf("/")+1));
+        System.out.println(sjly);
+    }
 
+    @Test
+    public void t3t(){
+        Set<String> error = new HashSet<>();
+        error.add("xxxx");
+        error.add("xxxx");
+        error.add("xxxxx");
+        error.add("xxxxxxx");
+        StringBuilder errorStr = new StringBuilder();
+        int i = 1;
+        for (String err:error){
+            errorStr.append(i).append("、").append(err).append("\n");
+            i++;
+        }
+        System.out.println(errorStr.toString());
+    }
+
+    @Test
+    public void t3(){
+        String a = "\\x01";
+        System.out.println(a);
+    }
     private void str(String a){
         a+="aaa";
         System.out.println(a);

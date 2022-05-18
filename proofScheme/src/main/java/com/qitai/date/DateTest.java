@@ -21,6 +21,13 @@ public class DateTest {
         Date date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(dateStr);
         System.out.println(date);
     }
+   @Test
+    public void test4() throws ParseException {
+
+       String dateStr = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date());
+       System.out.println(dateStr);
+
+   }
 
     @Test
     public void test1(){
